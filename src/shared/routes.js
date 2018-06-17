@@ -1,5 +1,5 @@
 import Home from './components/Home';
-import Post from './components/Post';
+import Movie from './components/Movie';
 
 import { fetchAllMovies, fetchMovieById } from './apiCalls';
 
@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: '/movie/:id',
-    C: Post,
+    C: Movie,
     getInitialData: (path = '') => fetchMovieById(path.split('/').pop()),
   },
 ];

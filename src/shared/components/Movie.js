@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-
-import Loading from './Loading';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Post = ({ loading, data }) => (
+import Loading from './Loading';
+
+const Movie = ({ loading, data }) => (
   <div className="post container">
     {loading ? (
       <Loading />
@@ -24,4 +24,4 @@ const Post = ({ loading, data }) => (
   </div>
 );
 
-export default Post;
+export default Movie;

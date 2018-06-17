@@ -24,13 +24,6 @@ class UniversalDataloader extends Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    const id = this.props.match.params.id;
-    if (prevProps.match.params.id !== id) {
-      this.fetchData(id);
-    }
-  }
-
   fetchData = id => {
     this.setState({ loading: true });
 
