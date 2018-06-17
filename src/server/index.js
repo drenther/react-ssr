@@ -19,7 +19,7 @@ app.use(express.static('public'));
 app.get('*', (req, res, next) => {
   const activeRoute = routes.find(path => matchPath(req.path, path)) || {};
 
-  const apiResponse = activeRoute.getInitialData(req.path);
+  const apiResponse = activeRoute.getInitialData ? activeRoute.getInitialData(req.path) : Promise.resolve();
 
   apiResponse
     .then(data => {
