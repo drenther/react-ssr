@@ -1,0 +1,38 @@
+{
+  "movies": [
+    { "id": 1, "title": "Avengers: Infinity War", "rating": "8.4" },
+    { "id": 2, "title": "Deadpool 2", "rating": "7.7" },
+    { "id": 3, "title": "Black Panther", "rating": "7.4" },
+    { "id": 4, "title": "Thor: Ragnarok", "rating": "7.3" }
+  ],
+  "movie": [
+    {
+      "id": 1,
+      "title": "Avengers: Infinity War",
+      "rating": "8.4",
+      "plot":
+        "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+    },
+    {
+      "id": 2,
+      "title": "Deadpool 2",
+      "rating": "7.7",
+      "plot":
+        "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life."
+    },
+    {
+      "id": 3,
+      "title": "Black Panther",
+      "rating": "7.4",
+      "plot":
+        "King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war."
+    },
+    {
+      "id": 4,
+      "title": "Thor: Ragnarok",
+      "rating": "7.3",
+      "plot":
+        "Thor is on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela."
+    }
+  ]
+}
