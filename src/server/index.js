@@ -32,6 +32,7 @@ app.get('*', (req, res, next) => {
         <html>
           <head>
             <title>Home</title>
+            <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
             <link type="text/css" rel="stylesheet" href="http://localhost:3000/styles.css">
             <script>window.__SERIALIZED_DATA__ = ${JSON.stringify(data)}</script>
           </head>
