@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Post = ({ loading, data }) => (
   <div className="post">
