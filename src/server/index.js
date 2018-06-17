@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { renderToString } from 'react-dom/server';
 import { matchPath, StaticRouter } from 'react-router-dom';
 
@@ -27,8 +28,9 @@ app.get('*', (req, res, next) => {
           <App />
         </StaticRouter>
       );
+      const title = Helmet.renderStatic();
 
-      res.send(template(data, markup));
+      res.send(template(data, markup, title));
     })
     .catch(next);
 });

@@ -1,10 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Loading from './Loading';
 
 const Home = ({ loading, data }) => (
-  <div className="home container">{loading ? <Loading /> : <Table movies={data} />}</div>
+  <div className="home container">
+    <Helmet>
+      <title>FavMovies - Home</title>
+    </Helmet>
+    {loading ? <Loading /> : <Table movies={data} />}
+  </div>
 );
 
 const Table = ({ movies }) => (

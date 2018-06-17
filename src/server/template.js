@@ -1,8 +1,8 @@
-export default (data, markup) => `
+export default (data, markup, title) => `
   <!DOCTYPE html>
   <html>
     <head>
-      <title>FavMovies - ${data.title ? data.title : 'Home'}</title>
+      <title>${title}</title>
       <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
       <script>window.__SERIALIZED_DATA__ = ${JSON.stringify(data)}</script>
     </head>

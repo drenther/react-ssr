@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Loading from './Loading';
 
 const Movie = ({ loading, data }) => (
   <div className="post container">
+    <Helmet>
+      <title>FavMovies - {loading ? 'Movie' : data.title}</title>
+    </Helmet>
     {loading ? (
       <Loading />
     ) : (
