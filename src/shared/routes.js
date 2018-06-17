@@ -11,7 +11,7 @@ const routes = [
     getInitialData: () => fetchAllPosts(),
   },
   {
-    path: '/posts/:id',
+    path: '/post/:id',
     C: Post,
     getInitialData: (path = '') => fetchPostById(path.split('/').pop()),
   },

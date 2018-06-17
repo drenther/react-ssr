@@ -21,9 +21,8 @@ app.get('*', (req, res, next) => {
 
   apiResponse
     .then(data => {
-      console.log(data);
       const markup = renderToString(
-        <StaticRouter location={req.url} context={data}>
+        <StaticRouter location={req.url} context={{ data }}>
           <App />
         </StaticRouter>
       );

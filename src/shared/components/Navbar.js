@@ -5,8 +5,8 @@ const Navbar = () => (
   <header className="navbar">
     <section className="navbar-section">
       <NavButton to="/" text="Home" />
-      <NavButton to="/posts/1" text="Post One" />
-      <NavButton to="/posts/2" text="Post Two" />
+      <NavButton to="/post/1" text="Post One" />
+      <NavButton to="/post/2" text="Post Two" />
     </section>
   </header>
 );
