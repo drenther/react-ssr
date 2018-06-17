@@ -8,8 +8,6 @@ import UniversalDataloader from './components/UniversalDataloader';
 
 import routes from './routes';
 
-import './App.css';
-
 class App extends Component {
   state = {
     open: false,
