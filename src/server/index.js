@@ -28,21 +28,21 @@ app.get('*', (req, res, next) => {
       );
 
       res.send(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Home</title>
-          <link type="text/css" rel="stylesheet" href="http://localhost:3000/styles.css">
-          <script>window.__SERIALIZED_DATA__ = ${JSON.stringify(data)}</script>
-        </head>
-  
-        <body>
-          <div id="app">${markup}</div>
-  
-          <script src="/bundle.js"></script>
-        </body>
-      </html>
-    `);
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Home</title>
+            <link type="text/css" rel="stylesheet" href="http://localhost:3000/styles.css">
+            <script>window.__SERIALIZED_DATA__ = ${JSON.stringify(data)}</script>
+          </head>
+    
+          <body>
+            <div id="app">${markup}</div>
+    
+            <script src="/bundle.js"></script>
+          </body>
+        </html>
+      `);
     })
     .catch(next);
 });

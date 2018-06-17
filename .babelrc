@@ -11,5 +11,6 @@
     ],
     "react",
     "stage-2"
-  ]
+  ],
+  "plugins": ["dynamic-import-node", "react-loadable/babel"]
 }

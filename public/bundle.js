@@ -1233,7 +1233,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home(_ref) {\n  var loading = _ref.loading,\n      posts = _ref.data;\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"home\" },\n    loading ? _react2.default.createElement(\n      \"div\",\n      { className: \"loader\" },\n      \"Loading\"\n    ) : _react2.default.createElement(\n      \"div\",\n      { className: \"posts\" },\n      posts.map(function (post) {\n        return _react2.default.createElement(\n          \"h3\",\n          { key: post.id },\n          post.title\n        );\n      })\n    )\n  );\n};\n\nexports.default = Home;\n\n//# sourceURL=webpack:///./src/shared/components/Home.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Loading = __webpack_require__(/*! ./Loading */ \"./src/shared/components/Loading.js\");\n\nvar _Loading2 = _interopRequireDefault(_Loading);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home(_ref) {\n  var loading = _ref.loading,\n      posts = _ref.data;\n  return _react2.default.createElement(\n    'div',\n    { className: 'home' },\n    loading ? _react2.default.createElement(_Loading2.default, null) : _react2.default.createElement(\n      'div',\n      { className: 'posts' },\n      posts.map(function (post) {\n        return _react2.default.createElement(\n          'h3',\n          { key: post.id },\n          post.title\n        );\n      })\n    )\n  );\n};\n\nexports.default = Home;\n\n//# sourceURL=webpack:///./src/shared/components/Home.js?");
 
 /***/ }),
 
@@ -1246,6 +1246,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar LazyModal = function LazyModal() {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"modal\" },\n    \"This is a lazy loaded modal. All hail component based code splitting.\"\n  );\n};\n\nexports.default = LazyModal;\n\n//# sourceURL=webpack:///./src/shared/components/LazyModal.js?");
+
+/***/ }),
+
+/***/ "./src/shared/components/Loading.js":
+/*!******************************************!*\
+  !*** ./src/shared/components/Loading.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Loader = function Loader() {\n  return _react2.default.createElement(\"div\", { className: \"loader\" });\n};\n\nexports.default = Loader;\n\n//# sourceURL=webpack:///./src/shared/components/Loading.js?");
 
 /***/ }),
 
@@ -1281,7 +1293,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Post = function Post(_ref) {\n  var loading = _ref.loading,\n      data = _ref.data;\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"post\" },\n    loading ? _react2.default.createElement(\n      \"div\",\n      { className: \"loader\" },\n      \"Loading\"\n    ) : _react2.default.createElement(\n      _react.Fragment,\n      null,\n      _react2.default.createElement(\n        \"h3\",\n        null,\n        data.title\n      ),\n      _react2.default.createElement(\n        \"p\",\n        null,\n        data.content\n      )\n    )\n  );\n};\n\nexports.default = Post;\n\n//# sourceURL=webpack:///./src/shared/components/Post.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Loading = __webpack_require__(/*! ./Loading */ \"./src/shared/components/Loading.js\");\n\nvar _Loading2 = _interopRequireDefault(_Loading);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Post = function Post(_ref) {\n  var loading = _ref.loading,\n      data = _ref.data;\n  return _react2.default.createElement(\n    'div',\n    { className: 'post' },\n    loading ? _react2.default.createElement(_Loading2.default, null) : _react2.default.createElement(\n      _react.Fragment,\n      null,\n      _react2.default.createElement(\n        'h3',\n        null,\n        data.title\n      ),\n      _react2.default.createElement(\n        'p',\n        null,\n        data.content\n      )\n    )\n  );\n};\n\nexports.default = Post;\n\n//# sourceURL=webpack:///./src/shared/components/Post.js?");
 
 /***/ }),
 
