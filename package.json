@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w --mode=development & nodemon index.js",
+    "start": "webpack -w --mode=development & nodemon ./build/server.js",
     "api": "json-server --watch db.json --port 3002"
   },
   "keywords": [],

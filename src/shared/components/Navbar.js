@@ -1,20 +1,24 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => (
-  <header className="navbar">
+const Navbar = ({ openModal }) => (
+  <header className="navbar container">
     <section className="navbar-section">
-      <NavButton to="/" text="Home" />
-      <NavButton to="/post/1" text="Post One" />
-      <NavButton to="/post/2" text="Post Two" />
+      <span className="navbar-brand mr-2">FavMovies</span>
     </section>
+    <ul className="tab tab-block">
+      <li className="tab-item">
+        <button className="btn btn-link" onClick={openModal}>
+          Coming Soon
+        </button>
+      </li>
+      <li className="tab-item">
+        <Link to="/" className="active">
+          Home
+        </Link>
+      </li>
+    </ul>
   </header>
-);
-
-const NavButton = ({ to, text }) => (
-  <NavLink to={to} className="btn btn-link" activeClassName="btn btn-primary">
-    {text}
-  </NavLink>
 );
 
 export default Navbar;

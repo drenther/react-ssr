@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Navlink, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import LazyModal from './components/LazyModal';
+import Modal from './components/Modal';
 import NoMatch from './components/NoMatch';
 import UniversalDataloader from './components/UniversalDataloader';
 
@@ -15,11 +15,16 @@ class App extends Component {
     open: false,
   };
 
+  toggleModal = () => {
+    this.setState(state => ({
+      open: !state.open,
+    }));
+  };
+
   render() {
     return (
       <div className="app">
-        <Navbar />
-
+        <Navbar openModal={this.toggleModal} />
         <main>
           <Switch>
             {routes.map(({ path, exact, C, ...rest }) => (
@@ -38,8 +43,7 @@ class App extends Component {
             <Route render={props => <NoMatch {...props} />} />
           </Switch>
         </main>
-
-        {this.state.open && <LazyModal />}
+        <Modal open={this.state.open} closeModal={this.toggleModal} />
       </div>
     );
   }

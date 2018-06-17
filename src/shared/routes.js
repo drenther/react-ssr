@@ -1,19 +1,19 @@
 import Home from './components/Home';
 import Post from './components/Post';
 
-import { fetchAllPosts, fetchPostById } from './apiCalls';
+import { fetchAllMovies, fetchMovieById } from './apiCalls';
 
 const routes = [
   {
     path: '/',
     exact: true,
     C: Home,
-    getInitialData: () => fetchAllPosts(),
+    getInitialData: () => fetchAllMovies(),
   },
   {
-    path: '/post/:id',
+    path: '/movie/:id',
     C: Post,
-    getInitialData: (path = '') => fetchPostById(path.split('/').pop()),
+    getInitialData: (path = '') => fetchMovieById(path.split('/').pop()),
   },
 ];
 

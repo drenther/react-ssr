@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Loader = () => <div className="loader" />;
+const Loading = ({ size }) => <div className={size === 'lg' ? 'loading-lg' : 'loading'} />;
 
-export default Loader;
+export default Loading;

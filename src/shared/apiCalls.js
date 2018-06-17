@@ -2,18 +2,18 @@ import axios from 'axios';
 
 const baseUri = 'http://localhost:3002';
 
-export const fetchAllPosts = () =>
+export const fetchAllMovies = () =>
   axios
-    .get(`${baseUri}/posts`)
+    .get(`${baseUri}/movies`)
     .then(({ data }) => data)
     .catch(e => {
       console.log(e);
       return null;
     });
 
-export const fetchPostById = id =>
+export const fetchMovieById = id =>
   axios
-    .get(`${baseUri}/post/${id}`)
+    .get(`${baseUri}/movie/${id}`)
     .then(({ data }) => data)
     .catch(e => {
       console.warn(e);
